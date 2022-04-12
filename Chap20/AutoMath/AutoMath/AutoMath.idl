@@ -1,0 +1,29 @@
+// AutoMath.idl : type library source for AutoMath.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (AutoMath.tlb).
+
+[ uuid(6bfc32a0-e566-4b0a-bf42-ad1bc1bfd8ec), version(1.0) ]
+library AutoMath
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  Primary dispatch interface for CAutoMathDoc
+
+	[ uuid(5bc9d67a-55e1-4548-b786-8ed007bb65ad) ]
+	dispinterface IAutoMath
+	{
+		properties:
+
+		methods:
+	};
+
+	//  Class information for CAutoMathDoc
+
+	[ uuid(d8d2d3ad-c09d-49de-b20e-7cdc434b1f4b) ]
+	coclass CAutoMathDoc
+	{
+		[default] dispinterface IAutoMath;
+	};
+};

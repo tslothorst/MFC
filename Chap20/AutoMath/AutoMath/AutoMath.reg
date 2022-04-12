@@ -1,0 +1,16 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below will be
+;   registered in your InitInstance automatically with a call to
+;   CWinApp::RegisterShellFileTypes and COleObjectFactory::UpdateRegistryAll.
+
+
+HKEY_CLASSES_ROOT\AutoMath.Document = AutoMath.Document
+
+
+HKEY_CLASSES_ROOT\AutoMath.Document\CLSID = {d8d2d3ad-c09d-49de-b20e-7cdc434b1f4b}
+
+HKEY_CLASSES_ROOT\CLSID\{d8d2d3ad-c09d-49de-b20e-7cdc434b1f4b} = AutoMath.Document
+HKEY_CLASSES_ROOT\CLSID\{d8d2d3ad-c09d-49de-b20e-7cdc434b1f4b}\ProgId = AutoMath.Document
+
+HKEY_CLASSES_ROOT\CLSID\{d8d2d3ad-c09d-49de-b20e-7cdc434b1f4b}\LocalServer32 = AutoMath.EXE

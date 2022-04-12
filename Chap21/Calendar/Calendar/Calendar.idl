@@ -1,0 +1,51 @@
+// Calendar.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (Calendar.tlb) that will become a resource in
+// Calendar.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(ab7f3116-70ca-408f-a838-6d4b6bf3969a), version(1.0),
+  control ]
+library CalendarLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CCalendarCtrl
+	[ 
+		uuid(4629000d-2924-4baa-ba77-9dafb051b43e)
+	]
+	dispinterface _DCalendar
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CCalendarCtrl
+
+	[ 
+		uuid(e31bff04-f4da-42ae-a0af-b43c8d5fb746)
+	]
+	dispinterface _DCalendarEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+	};
+
+	//  Class information for CCalendarCtrl
+	[
+		uuid(05910d1c-0bba-446d-a39f-2ae10647dec3)
+	]
+	coclass Calendar
+	{
+		[default] dispinterface _DCalendar;
+		[default, source] dispinterface _DCalendarEvents;
+	};
+
+};
